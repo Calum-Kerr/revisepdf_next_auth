@@ -6,8 +6,8 @@ import { PropsWithChildren, Suspense } from 'react';
 import { getURL } from '@/utils/helpers';
 import 'styles/main.css';
 
-const title = 'Next.js Subscription Starter';
-const description = 'Brought to you by Vercel, Stripe, and Supabase.';
+const title = 'RevisePDF - Professional PDF Processing';
+const description = 'Transform, edit, and optimize your PDFs with powerful subscription-based processing tools.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(getURL()),

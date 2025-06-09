@@ -9,7 +9,7 @@
 }
 
 *:focus:not(ol) {
-  @apply outline-none ring-2 ring-pink-500 ring-opacity-50;
+  @apply outline-none ring-2 ring-brand ring-opacity-50;
 }
 
 html {
@@ -56,4 +56,27 @@ p a {
 
 .height-screen-helper {
   min-height: calc(100vh - 80px);
+}
+
+/* RevisePDF Brand Styles */
+:root {
+  --brand-primary: #238287;
+  --brand-primary-light: #2dd4bf;
+  --brand-primary-dark: #0f766e;
+}
+
+.brand-gradient {
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-light) 100%);
+}
+
+.brand-text {
+  color: var(--brand-primary);
+}
+
+.brand-bg {
+  background-color: var(--brand-primary);
+}
+
+.brand-border {
+  border-color: var(--brand-primary);
 }

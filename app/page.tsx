@@ -1,24 +1,18 @@
-import Pricing from '@/components/ui/Pricing/Pricing';
+import { redirect } from 'next/navigation';
 import { createClient } from '@/utils/supabase/server';
-import {
-  getProducts,
-  getSubscription,
-  getUser
-} from '@/utils/supabase/queries';
+import { getUser } from '@/utils/supabase/queries';
+import Dashboard from '@/components/ui/Dashboard/Dashboard';
+import LandingPage from '@/components/ui/LandingPage/LandingPage';
 
-export default async function PricingPage() {
+export default async function HomePage() {
   const supabase = createClient();
-  const [user, products, subscription] = await Promise.all([
-    getUser(supabase),
-    getProducts(supabase),
-    getSubscription(supabase)
-  ]);
+  const user = await getUser(supabase);
 
-  return (
-    <Pricing
-      user={user}
-      products={products ?? []}
-      subscription={subscription}
-    />
-  );
+  // If user is logged in, show dashboard
+  if (user) {
+    return <Dashboard user={user} />;
+  }
+
+  // If not logged in, show landing page
+  return <LandingPage />;
 }

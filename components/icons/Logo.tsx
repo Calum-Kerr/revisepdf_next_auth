@@ -1,20 +1,25 @@
 const Logo = ({ ...props }) => (
-  <svg
-    width="32"
-    height="32"
-    viewBox="0 0 32 32"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <rect width="100%" height="100%" rx="16" fill="white" />
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-      fill="black"
-    />
-  </svg>
+  <div className="flex items-center space-x-2">
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <rect width="100%" height="100%" rx="6" fill="#238287" />
+      <path
+        d="M8 10h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2zm0 4h8v2H8v-2z"
+        fill="white"
+      />
+      <path
+        d="M20 18l4 4-4 4v-8z"
+        fill="white"
+      />
+    </svg>
+    <span className="text-xl font-bold text-white">RevisePDF</span>
+  </div>
 );
 
 export default Logo;
