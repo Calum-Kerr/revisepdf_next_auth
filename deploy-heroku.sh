@@ -27,10 +27,11 @@ echo "⚙️  Setting environment variables..."
 heroku config:set NODE_ENV=production --app $APP_NAME
 heroku config:set NEXT_PUBLIC_SITE_URL=https://$APP_NAME.herokuapp.com --app $APP_NAME
 
-# Supabase configuration
-heroku config:set NEXT_PUBLIC_SUPABASE_URL=https://ivirvqdjhgciuiegcjgc.supabase.co --app $APP_NAME
-heroku config:set NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2aXJ2cWRqaGdjaXVpZWdjamdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk1MDAxNDQsImV4cCI6MjA2NTA3NjE0NH0.CBNY79JwS_VOS4XnZFykug5x2wZ9j6HUmm1d9CLqA4I --app $APP_NAME
-heroku config:set SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2aXJ2cWRqaGdjaXVpZWdjamdjIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0OTUwMDE0NCwiZXhwIjoyMDY1MDc2MTQ0fQ.ZcW3w1GEW499Usc0zsFSBhx2YwTW-KaXTbqBmBAPz9s --app $APP_NAME
+# Supabase configuration (you'll need to add these)
+echo "🔧 Please add your Supabase configuration:"
+echo "   heroku config:set NEXT_PUBLIC_SUPABASE_URL=your-supabase-url --app $APP_NAME"
+echo "   heroku config:set NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key --app $APP_NAME"
+echo "   heroku config:set SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key --app $APP_NAME"
 
 # Stripe configuration (you'll need to add these)
 echo "💳 Please add your Stripe configuration:"
