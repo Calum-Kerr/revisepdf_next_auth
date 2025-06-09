@@ -1,0 +1,63 @@
+{
+  "name": "RevisePDF",
+  "description": "Professional PDF processing platform with subscription-based storage and file size limits",
+  "repository": "https://github.com/Calum-Kerr/revisepdf_next_auth",
+  "logo": "https://cdn.jsdelivr.net/gh/Calum-Kerr/revisepdf_next_auth/public/favicon.ico",
+  "keywords": ["nextjs", "react", "pdf", "processing", "subscription", "stripe", "supabase"],
+  "image": "heroku/nodejs",
+  "stack": "heroku-22",
+  "success_url": "/",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:essential-0"
+    }
+  ],
+  "env": {
+    "NODE_ENV": {
+      "description": "Node environment",
+      "value": "production"
+    },
+    "NEXT_PUBLIC_SITE_URL": {
+      "description": "The URL of your Heroku app",
+      "value": "https://your-app-name.herokuapp.com"
+    },
+    "NEXT_PUBLIC_SUPABASE_URL": {
+      "description": "Your Supabase project URL (RevisePDF Project)",
+      "value": "https://ivirvqdjhgciuiegcjgc.supabase.co"
+    },
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": {
+      "description": "Your Supabase anonymous key (RevisePDF Project)",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2aXJ2cWRqaGdjaXVpZWdjamdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk1MDAxNDQsImV4cCI6MjA2NTA3NjE0NH0.CBNY79JwS_VOS4XnZFykug5x2wZ9j6HUmm1d9CLqA4I"
+    },
+    "SUPABASE_SERVICE_ROLE_KEY": {
+      "description": "Your Supabase service role key (RevisePDF Project - keep this secret!)",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2aXJ2cWRqaGdjaXVpZWdjamdjIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0OTUwMDE0NCwiZXhwIjoyMDY1MDc2MTQ0fQ.ZcW3w1GEW499Usc0zsFSBhx2YwTW-KaXTbqBmBAPz9s"
+    },
+    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": {
+      "description": "Your Stripe publishable key",
+      "required": true
+    },
+    "STRIPE_SECRET_KEY": {
+      "description": "Your Stripe secret key",
+      "required": true
+    },
+    "STRIPE_WEBHOOK_SECRET": {
+      "description": "Your Stripe webhook secret",
+      "required": true
+    }
+  },
+  "scripts": {
+    "postdeploy": "echo 'RevisePDF deployed successfully!'"
+  }
+}
